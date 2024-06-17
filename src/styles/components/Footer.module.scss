@@ -1,0 +1,179 @@
+@import '../utils/_mixinsMobile';
+
+.footer {
+  background-color: var(--color-800);
+  padding-inline: 116px;
+  padding-top: 96px;
+  height: 100%;
+  width: 100%;
+
+  @include respond-to(mobile-portrait) {
+    padding-inline: 32px;
+    padding-top: 32px;
+  }
+
+  @include respond-to(mobile-landscape) {
+    padding-inline: 44px;
+    padding-top: 40px;
+  }
+
+  @include respond-to(tablet-portrait) {
+    padding-inline: 32px;
+    padding-top: 64px;
+  }
+
+  @include respond-to(tablet-landscape) {
+    padding-inline: 48px;
+    padding-top: 64px;
+  }
+
+  @include respond-to(desktop) {
+    padding-inline: 116px;
+    padding-top: 96px;
+  }
+
+  &__inner {
+    max-width: 1060px;
+    border-bottom: 1px solid var(--color-600);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    
+
+    @include respond-to(mobile-portrait) {//0px
+      flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 50px;
+      
+      }
+    @include respond-to(mobile-landscape) {//480px
+      flex-wrap: wrap;
+    justify-content: space-between;
+      
+      
+      }
+    @include respond-to(tablet-portrait) {//768px
+      }
+    @include respond-to(tablet-landscape) {//992px
+      }
+    @include respond-to(desktop) {//1200px
+      }
+    @include respond-to(large-desktop) {//1600px
+      }
+    @include respond-to(tv) {//1920px
+      }
+
+  }
+
+  &__wrapper {
+    max-width: 1060px;
+    padding-bottom: 85px;
+  }
+
+  &__title {
+    color: var(--color-700);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: -1px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include respond-to(mobile-portrait) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    @include respond-to(mobile-landscape) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @include respond-to(tablet-portrait) {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__item {
+    color: var(--color-neutral-white);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--color-branding);
+
+    }
+
+    @include respond-to(mobile-portrait) {
+      font-size: 12px;
+    }
+
+    @include respond-to(mobile-landscape) {
+      font-size: 13px;
+    }
+
+    @include respond-to(tablet-portrait) {
+      font-size: 14px;
+    }
+  }
+}
+
+.followUs {
+  &__list {
+    display: flex;
+    gap: 18px;
+
+    @include respond-to(mobile-portrait) {
+      gap: 8px;
+    }
+
+    @include respond-to(mobile-landscape) {
+      gap: 10px;
+    }
+
+    @include respond-to(tablet-portrait) {
+      gap: 12px;
+    }
+  }
+
+  &__item {
+
+    &:hover {
+      outline: 4px solid var(--color-branding);
+      border-radius: 50%;
+    }
+    @include respond-to(mobile-portrait) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include respond-to(mobile-landscape) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @include respond-to(tablet-portrait) {
+      width: 40px;
+      height: 40px;
+    }
+
+    
+  }
+}

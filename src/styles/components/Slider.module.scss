@@ -1,0 +1,56 @@
+@import '../utils/mixinsMobile';
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__list {
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        overflow-x: hidden;
+        height: auto;
+    }
+
+    &__item {
+        flex: 0 0 calc((100% - 4 * 20px) / 5);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &__list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .btnLeft,
+    .btnRight {
+        position: absolute;
+        top: 200px;
+        transform: translateY(-50%);
+        background-color: var(--color-300);
+        border: 1px solid var(--color-800);
+        cursor: pointer;
+        z-index: 10;
+        line-height: 64px;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    .btnLeft {
+        left: 20px;
+    }
+
+    .btnRight {
+        right: 20px;
+    }
+}

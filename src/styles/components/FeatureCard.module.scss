@@ -1,0 +1,157 @@
+@import '../utils/mixinsMobile';
+
+.featureCard {
+    display: flex;
+    gap: 56px;
+    flex-direction: row;
+    // width: 1066px;
+    border-radius: 16px;
+    overflow: hidden;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+            @include respond-to(mobile-landscape) {//480px
+                flex-direction: column;
+                gap: 20px;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                flex-direction: row;
+                gap: 20px;
+            }
+            @include respond-to(tablet-landscape) {//992px
+                gap: 40px;
+            }
+            @include respond-to(desktop) {//1200px
+               gap: 40px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: scale(1.02);
+
+    }
+
+    .imageWrapper {
+        width: 100%;
+        height: 466px;
+        overflow: hidden;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+            @include respond-to(mobile-landscape) {//480px
+                 width:300px;
+                height: auto;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                 width:300px;
+                height: auto;
+            }
+         
+            @include respond-to(tablet-landscape) {//992px
+                width: 450px;
+                height: auto;
+            }
+            @include respond-to(desktop) {//1200px
+                width: 500px;
+                height: auto;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
+
+            
+        }
+    }
+
+    .content {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include respond-to(mobile-landscape) {//480px
+                gap: 20px;
+            }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 16px;
+
+            @include respond-to(mobile-landscape) {//480px
+                margin-inline:auto;
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+            margin-left: 0;
+            }
+        }
+
+        .title {
+            color: var(--color-800);
+            font-family: var(--font-family);
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.54;
+            letter-spacing: 0%;
+            text-align: left;
+
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 20px;
+                line-height: 1.24;
+            }
+        }
+
+        .description {
+            color: var(--color-800);
+            font-family: var(--font-family);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 2;
+            letter-spacing: 4%;
+            text-align: left;
+
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 13px;
+                line-height: 1.5;
+            }
+        }
+
+        .link {
+            color: var(--color-800);
+            font-family: var(--font-family);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: 2%;
+            text-align: left;
+            transition: transform .2s ease-in-out;
+
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 14px;
+                line-height: 1.24;
+            }
+
+            &:hover {
+                // text-decoration: underline;
+                color: var(--color-neutral-beaver);
+            }
+        }
+    }
+}

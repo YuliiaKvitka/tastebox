@@ -1,0 +1,48 @@
+.love-yourself {
+    background-color: var(--color-100);
+    border-top: 1px solid rgb(215, 199, 180);
+    padding-block: 80px;
+
+    &__wrapper {
+        margin-top: 10px;
+    }
+
+    &__text {
+        color: var(--color-800);
+        font-family: var(--font-family);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.54;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+    &__btn-wrap {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__button {
+        width: 298px;
+        height: 56px;
+        border-radius: 30px;
+        border: 0;
+        background-color: var(--color-branding);
+        color: var(--color-neutral-white);
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0%;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            background-color: var(--color-contrast);
+            color: var(--color-800);
+        }
+
+}
+}   

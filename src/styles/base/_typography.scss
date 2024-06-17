@@ -1,0 +1,101 @@
+// src/styles/base/_typography.scss
+
+@import '../utils/mixinsMobile';
+
+body {
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  // line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // font-weight: 600;
+  // line-height: 1.25;
+}
+
+// p {
+//   margin-bottom: 1rem;
+// }
+
+
+h1 {
+  /* Display/2xl */
+  color: var(--color-neutral-white);
+  font-family: var(--font-family);
+  font-size: 14.375rem ;//230px
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+
+        @include respond-to(mobile-portrait) {//0px
+          font-size: 70px;
+        }
+        @include respond-to(mobile-landscape) {//480px
+          font-size: 70px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+          font-size: 128px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+          font-size: 148px;
+        }
+        @include respond-to(desktop) {//1200px
+          //230px
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
+}
+
+h2 {
+color: var(--color-800);
+font-family: var(--font-family);
+font-size: 80px;
+font-weight: 400;
+line-height: 88px;
+letter-spacing: 4%;
+text-align: center;
+text-transform: uppercase;
+
+@include respond-to(mobile-portrait) {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 2%;
+  }
+
+  @include respond-to(mobile-landscape) {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 2%;
+  }
+
+  @include respond-to(tablet-portrait) {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 3%;
+  }
+
+  @include respond-to(tablet-landscape) {
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: 3%;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: 4%;
+  }
+}
+
+p {
+color: var(--color-800);
+font-family: var(--font-family);
+font-size: 14px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 4%;
+text-align: center;
+}

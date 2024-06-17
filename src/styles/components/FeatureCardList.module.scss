@@ -1,0 +1,57 @@
+@import '../utils/mixinsMobile';
+
+
+.cardList {
+    display: flex;
+    overflow-x: auto;
+    gap: 96px;
+    scroll-snap-type: x mandatory;
+    width: calc(100% + 16px);  // Добавлено для компенсации отступа справа последней карточки
+    flex-wrap: nowrap;  // Запрет на перенос карточек на новую строку
+
+        @include respond-to(mobile-landscape) {//480px
+            gap: 30px;
+            }
+        @include respond-to(tablet-portrait) {//768px
+            gap: 40px;
+            }
+         @include respond-to(tablet-landscape) {//992px
+            gap: 50px;
+            }
+
+            @include respond-to(desktop) {//1200px
+               gap: 96px;
+            }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .featureCard {
+        flex: 0 0 auto;  // Фиксируем ширину карточек
+        // margin-right: 96px;  // Расстояние между карточками
+        scroll-snap-align: start;  // Привязка прокрутки к краю карточек
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+            @include respond-to(mobile-landscape) {//480px
+            }
+            @include respond-to(tablet-portrait) {//768px
+            }
+            @include respond-to(tablet-landscape) {//992px
+                margin-right: 0px;
+            }
+            @include respond-to(desktop) {//1200px
+              margin-right: 0px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
+
+        &:last-child {
+            margin-right: 0;  // Убираем отступ справа у последней карточки
+        }
+    }
+}
+

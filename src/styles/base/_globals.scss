@@ -1,0 +1,44 @@
+// Add global styles
+body {
+  margin: 0;
+   box-sizing: border-box;
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// *, *::after, *::before {
+//   box-sizing: inherit;
+// }
+
+html, body {
+  max-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; // предотвратить горизонтальный скролл
+  overflow-y: auto; /* позволить вертикальный скролл */
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding: 0 10px;
+  max-width: 1420px;
+  margin-inline: auto;
+}
+
+.main {
+  flex-grow: 1; //прижали футер вниз
+}
+

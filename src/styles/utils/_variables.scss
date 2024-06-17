@@ -1,0 +1,27 @@
+// src/styles/utils/_variables.scss
+
+// $primary-color: #0070f3;
+// $secondary-color: #005bb5;
+// $font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+// $font-size-base: 16px;
+
+:root {
+    --color-neutral-white: #ffffff;
+    --color-neutral-beaver: #B79987;
+
+    --color-branding: #FFC634;
+    --color-contrast: #FDE12D;
+    --color-secondary: #917C78;
+    --color-third: #545E56;
+
+    --color-100: #FAFAF5;
+    --color-200: #F7F6EC;
+    --color-300: #EBE8D6;
+    --color-400: #D7C7B4;
+    --color-500: #CFBAA0;
+    --color-600: #B69C7E;
+    --color-700: #ACA399;
+    --color-800: #594338;
+
+    --font-family: Jost, sans-serif;
+}

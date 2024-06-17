@@ -1,0 +1,127 @@
+// Box.module.scss
+.box {
+  border: 1px solid var(--color-400);
+  border-radius: 8px;
+  width: 225px; // Ширина коробки
+  text-align: center; // Центрирование текста
+  background-color: transparent; // Цвет фона коробки
+}
+
+.header {
+  height: 40px;
+  padding: 10px; // Внутренние отступы заголовка
+  border-top-left-radius: 8px; // Скругленные углы слева сверху
+  border-top-right-radius: 8px; // Скругленные углы справа сверху
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imageWrapper {
+  margin-top: 33px;
+  position: relative; /* Это позволяет позиционировать текст относительно этого блока */
+}
+
+.image {
+  width: 135px; // Ширина изображения коробки
+  height: 116px; // Высота изображения коробки
+  margin: 0 auto 10px; // Центрирование изображения и отступ снизу
+  background-color: transparent; // Прозрачный фон для изображения
+  background-image: url('../../../public/assets/box.svg'); // Путь к вашему изображению коробки
+  background-size: contain; // Масштабирование изображения по размеру контейнера
+  background-repeat: no-repeat; // Отсутствие повторения изображения
+}
+
+.meals {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 65%; /* Положение по вертикали */
+  left: 50%; /* Положение по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование текста */
+  text-align: center;
+   text-transform: uppercase;
+  
+  &__number {
+  color: var(--color-800);
+  font-family: var(--font-family);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0%;
+ 
+}
+&__text {
+  /* Text/md - all cap */
+color: var(--color-800);
+font-family: var(--font-family);
+font-size: 14px;
+font-weight: 400;
+line-height: 1.43;
+letter-spacing: 0%;
+}
+}
+
+.priceSection {
+  margin-top: 20px; // Отступ сверху для секции цены
+}
+
+.price {
+  color: var(--color-800);
+  font-family: var(--font-family);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & span {
+    color: var(--color-800);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+}
+
+
+
+.perMeal {
+  margin-block: 15px;
+  color: var(--color-600);
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.specialOffer {
+  border-radius: 4px;
+  margin-inline: auto ;
+  width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+

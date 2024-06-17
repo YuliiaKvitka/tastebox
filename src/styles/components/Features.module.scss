@@ -1,0 +1,60 @@
+@import '../utils/mixinsMobile';
+
+.features {
+    height: auto;
+    max-height: 100%;
+    background-color: var(--color-200);
+   
+
+    &__inner {
+        background-color: var(--color-neutral-white);
+        border-radius: 80px 80px 0px 0px;
+        padding-top: 56px;
+        padding-bottom: 96px;
+        padding-left: 96px;
+
+            @include respond-to(mobile-portrait) {//0px
+                padding-left: 20px;
+                border-radius: 60px 60px 0px 0px;
+            }
+            @include respond-to(mobile-landscape) {//480px
+                padding-left: 20px;
+                border-radius: 60px 60px 0px 0px;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                padding-left: 50px;
+            }
+            @include respond-to(tablet-landscape) {//992px
+                padding-left: 50px;
+            }
+            @include respond-to(desktop) {//1200px
+                padding-left: 96px;
+            }
+            @include respond-to(large-desktop) {//1600px
+                padding-left: 96px;
+            }
+            @include respond-to(tv) {//1920px
+            }
+    }
+
+    &__title {
+        color: var(--color-800);
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 48px;
+
+          @include respond-to(mobile-portrait) {//0px
+            margin-bottom: 30px;
+            }
+            @include respond-to(mobile-landscape) {//480px
+                margin-bottom: 30px;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                margin-bottom: 30px;
+            }
+    }
+}

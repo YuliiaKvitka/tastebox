@@ -1,0 +1,46 @@
+.imageRow {
+    display: flex;
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    gap: 16px;
+    padding-bottom: 12px;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--color-600) var(--color-200); /* Цвет скроллбара для Firefox */
+
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-600);
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--color-200);
+    }
+    
+    img {
+        width: 231px; /* Ширина изображения */
+        height: auto; /* Автоматическая высота */
+        border-radius: 8px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.2);
+            
+        }
+    }
+
+    @media (max-width: 768px) {
+        img {
+            width: 120px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        img {
+            width: 100px;
+        }
+    }
+}
